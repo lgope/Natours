@@ -17,10 +17,9 @@
   <a href="#deployment">Deployment</a> •
   <a href="#build-with">Build With</a> •
   <a href="#to-do">To-do</a> •
-  <a href="#installation">Installation</a>
+  <a href="#installation">Installation</a> • 
+  <a href="#acknowledgement">Acknowledgement</a>
 </p>
-
-
 
 ## Deployed Version
 Live demo (Feel free to visit) 👉 : https://lakshman-natours.herokuapp.com/
@@ -159,3 +158,7 @@ Setting up ESLint and Prettier in VS Code 👇
 $ npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node
 eslint-plugin-import eslint-plugin-jsx-a11y  eslint-plugin-react --save-dev
 ```
+
+## Acknowledgement
+
+* This project is part of the online course I've taken at Udemy. Thanks to Jonas Schmedtmann for creating this awesome course! Link to the course: [Node.js, Express, MongoDB & More: The Complete Bootcamp 2019](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/)

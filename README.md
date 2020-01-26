@@ -18,6 +18,8 @@
   <a href="#build-with">Build With</a> •
   <a href="#to-do">To-do</a> •
   <a href="#installation">Installation</a> • 
+  <a href="#known-bugs">Known Bugs</a> • 
+  <a href="#future-updates">Future Updates</a> • 
   <a href="#acknowledgement">Acknowledgement</a>
 </p>
 
@@ -93,10 +95,15 @@ Before using the API, you need to set the variables in Postman depending on your
   ```
 
 Check [Natours API Documentation](https://documenter.getpostman.com/view/8689170/SVmzvwpY?version=latest) for more info.
-API Features:
+
+<b> API Features: </b>
+
 Tours List 👉 https://lakshman-natours.herokuapp.com/api/v1/tours
+
 Tours State 👉 https://lakshman-natours.herokuapp.com/api/v1/tours/tour-stats
+
 Get Top 5 Cheap Tours 👉 https://lakshman-natours.herokuapp.com/api/v1/tours/top-5-cheap
+
 Get Tours Within Radius 👉 https://lakshman-natours.herokuapp.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
 
 
@@ -163,6 +170,19 @@ Setting up ESLint and Prettier in VS Code 👇
 $ npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node
 eslint-plugin-import eslint-plugin-jsx-a11y  eslint-plugin-react --save-dev
 ```
+
+
+## Known Bugs
+Feel free to email me at lakshman.gope2@gmail.com if you run into any issues or have questions, ideas or concerns.
+Please enjoy and feel free to share your opinion, constructive criticism, or comments about my work. Thank you! 🙂
+
+## Future Updates
+
+* Enable PWA
+* Improve overall UX/UI and fix bugs
+* Featured Tours
+* Recently Viewed Tours
+* And More ! There's always room for improvement!
 
 ## Acknowledgement
 

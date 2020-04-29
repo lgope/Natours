@@ -32,9 +32,8 @@ if (signupForm) {
     const passwordConfirm = document.getElementById('passwordConfirm').value;
 
     signup(name, email, password, passwordConfirm);
-  });  
+  });
 }
-
 
 if (loginForm)
   loginForm.addEventListener('submit', e => {

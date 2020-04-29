@@ -67,6 +67,7 @@ const sendErrorProd = async (err, req, res) => {
         message: `${err.message} (${errorId})`
       });
     }
+
     // B) Programming or other unknown error: don't leak error details
     // 1) Log error
     console.error('ERROR 💥', err);
@@ -88,6 +89,7 @@ const sendErrorProd = async (err, req, res) => {
       msg: `${err.message} (${errorId})`
     });
   }
+
   // B) Programming or other unknown error: don't leak error details
   // 1) Log error
   console.error('ERROR 💥', err);

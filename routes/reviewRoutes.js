@@ -10,6 +10,7 @@ const router = express.Router({ mergeParams: true });
 
 router.use(authController.protect);
 
+// user review routes
 router
   .route('/')
   .get(reviewController.getAllReviews)

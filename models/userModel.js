@@ -28,6 +28,7 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: [true, 'Please provied a password'],
     minlength: 8,
+    pattern: "^[A-Za-z0-9 -_@]$",
     select: false
   },
   passwordConfirm: {

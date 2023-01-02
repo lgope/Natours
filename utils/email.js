@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer');
 const pug = require('pug');
-const htmlToText = require('html-to-text');
+const {htmlToText} = require('html-to-text');
 
 // For create email obj to send actual emails.
 module.exports = class Email {

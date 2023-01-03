@@ -1,24 +1,24 @@
-const path = require('path');
-const express = require('express');
-const morgan = require('morgan'); // morgan is logging middleware. That's gonna allow us to see request data in the console
-const rateLimit = require('express-rate-limit');
-const helmet = require('helmet');
-const mongoSanitize = require('express-mongo-sanitize');
-const xss = require('xss-clean');
-const hpp = require('hpp');
-const cookieParser = require('cookie-parser');
-const bodyParser = require('body-parser');
-const compression = require('compression');
-const cors = require('cors');
+import path from 'path';
+import express from 'express';
+import morgan from 'morgan'; // morgan is logging middleware. That's gonna allow us to see request data in the console
+import rateLimit from 'express-rate-limit';
+import helmet from 'helmet';
+import mongoSanitize from 'express-mongo-sanitize';
+import xss from 'xss-clean';
+import hpp from 'hpp';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import compression from 'compression';
+import cors from 'cors';
 
-const AppError = require('./utils/appError');
-const globalErrorHandler = require('./controllers/errorController');
-const tourRouter = require('./routes/tourRoutes');
-const userRouter = require('./routes/userRoutes');
-const reviewRouter = require('./routes/reviewRoutes');
-const bookingRouter = require('./routes/bookingRoutes');
-const bookingController = require('./controllers/bookingController');
-const viewRouter = require('./routes/viewRoutes');
+import AppError from './utils/appError';
+import globalErrorHandler from './controllers/errorController';
+import tourRouter from './routes/tourRoutes';
+import userRouter from './routes/userRoutes';
+import reviewRouter from './routes/reviewRoutes';
+import bookingRouter from './routes/bookingRoutes';
+import bookingController from './controllers/bookingController';
+import viewRouter from './routes/viewRoutes';
 
 // Start express app
 const app = express();

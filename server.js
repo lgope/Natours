@@ -1,15 +1,16 @@
-const mongoose = require('mongoose');
-const chalk = require('chalk');
-const dotenv = require('dotenv');
+import mongoose from 'mongoose';
+import chalk from 'chalk';
+
+import dotenv from 'dotenv';
+
+dotenv.config({ path: './config.env' });
+import app from './app.js';
 
 process.on('uncaughtException', err => {
   console.log('UNCAUGHT EXCEPTION! 💥 Shutting down...');
   console.log(err.name, err.message);
   process.exit(1);
 });
-
-dotenv.config({ path: './config.env' });
-const app = require('./app');
 
 const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
 

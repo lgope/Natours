@@ -24,7 +24,7 @@
 </p>
 
 ## Deployed Version
-Live demo (Feel free to visit) 👉 : https://lakshman-natours.herokuapp.com/
+Live demo (Feel free to visit) 👉 : https://lgope-natours.onrender.com/
 
 
 ## Key Features
@@ -98,13 +98,13 @@ Check [Natours API Documentation](https://documenter.getpostman.com/view/8689170
 
 <b> API Features: </b>
 
-Tours List 👉 https://lakshman-natours.herokuapp.com/api/v1/tours
+Tours List 👉 https://lgope-natours.onrender.com/api/v1/tours
 
-Tours State 👉 https://lakshman-natours.herokuapp.com/api/v1/tours/tour-stats
+Tours State 👉 https://lgope-natours.onrender.com/api/v1/tours/tour-stats
 
-Get Top 5 Cheap Tours 👉 https://lakshman-natours.herokuapp.com/api/v1/tours/top-5-cheap
+Get Top 5 Cheap Tours 👉 https://lgope-natours.onrender.com/api/v1/tours/top-5-cheap
 
-Get Tours Within Radius 👉 https://lakshman-natours.herokuapp.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
+Get Tours Within Radius 👉 https://lgope-natours.onrender.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
 
 
 

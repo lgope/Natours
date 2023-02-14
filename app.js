@@ -11,14 +11,19 @@ import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
 
-import AppError from './utils/appError';
-import globalErrorHandler from './controllers/errorController';
-import tourRouter from './routes/tourRoutes';
-import userRouter from './routes/userRoutes';
-import reviewRouter from './routes/reviewRoutes';
-import bookingRouter from './routes/bookingRoutes';
-import bookingController from './controllers/bookingController';
-import viewRouter from './routes/viewRoutes';
+import AppError from './utils/appError.js';
+import globalErrorHandler from './controllers/errorController.js';
+import tourRouter from './routes/tourRoutes.js';
+import userRouter from './routes/userRoutes.js';
+import reviewRouter from './routes/reviewRoutes.js';
+import bookingRouter from './routes/bookingRoutes.js';
+import * as bookingController from './controllers/bookingController.js';
+import viewRouter from './routes/viewRoutes.js';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 
 // Start express app
 const app = express();
@@ -108,4 +113,4 @@ app.all('*', (req, res, next) => {
 
 app.use(globalErrorHandler);
 
-module.exports = app;
+export default app;

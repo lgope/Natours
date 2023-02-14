@@ -1,5 +1,5 @@
-const AppError = require('./../utils/appError');
-const ErrorStack = require('./../models/errorModel');
+import AppError from './../utils/appError.js';
+import ErrorStack from './../models/errorModel.js';
 
 const saveError = async err => {
   const newError = await ErrorStack.create({
@@ -101,7 +101,7 @@ const sendErrorProd = async (err, req, res) => {
   });
 };
 
-module.exports = (err, req, res, next) => {
+export default function globalErrorHandler (err, req, res, next) {
   // console.log(err.stack);
 
   err.statusCode = err.statusCode || 500;

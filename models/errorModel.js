@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const errrorSchema = new mongoose.Schema({
   status: {
@@ -21,4 +21,4 @@ const errrorSchema = new mongoose.Schema({
 
 const ErrorStack = mongoose.model('ErrorStack', errrorSchema);
 
-module.exports = ErrorStack;
+export default ErrorStack;

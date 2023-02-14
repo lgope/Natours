@@ -1,10 +1,10 @@
-const Tour = require('../models/tourModel');
-const User = require('../models/userModel');
-const Booking = require('../models/bookingModel');
-const catchAsync = require('../utils/catchAsync');
-const AppError = require('../utils/appError');
+import Tour from '../models/tourModel.js';
+import User from '../models/userModel.js';
+import Booking from '../models/bookingModel.js';
+import catchAsync from '../utils/catchAsync.js';
+import AppError from '../utils/appError.js';
 
-exports.alerts = (req, res, next) => {
+export const alerts = (req, res, next) => {
   const { alert } = req.query;
   if (alert === 'booking')
     res.locals.alert =
@@ -12,7 +12,7 @@ exports.alerts = (req, res, next) => {
   next();
 };
 
-exports.getOverview = catchAsync(async (req, res, next) => {
+export const getOverview = catchAsync(async (req, res, next) => {
   // 1) Get tour data from collection
   const tours = await Tour.find();
 
@@ -24,7 +24,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getTour = catchAsync(async (req, res, next) => {
+export const getTour = catchAsync(async (req, res, next) => {
   // 1) Get the data, for the requested tour (including reviews and guides)
   const tour = await Tour.findOne({ slug: req.params.slug }).populate({
     path: 'reviews',
@@ -43,25 +43,25 @@ exports.getTour = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getSingupForm = (req, res) => {
+export const getSingupForm = (req, res) => {
   res.status(200).render('signup', {
     title: 'create your account!'
   });
 };
 
-exports.getLoginForm = (req, res) => {
+export const getLoginForm = (req, res) => {
   res.status(200).render('login', {
     title: 'Log into your account'
   });
 };
 
-exports.getAccount = (req, res) => {
+export const getAccount = (req, res) => {
   res.status(200).render('account', {
     title: 'Your account'
   });
 };
 
-exports.getMyTours = catchAsync(async (req, res, next) => {
+export const getMyTours = catchAsync(async (req, res, next) => {
   // 1) Find all bookings
   const bookings = await Booking.find({ user: req.user.id });
 
@@ -83,7 +83,7 @@ exports.getMyTours = catchAsync(async (req, res, next) => {
   }
 });
 
-exports.updateUserData = catchAsync(async (req, res, next) => {
+export const updateUserData = catchAsync(async (req, res, next) => {
   const updatedUser = await User.findByIdAndUpdate(
     req.user.id,
     {

@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const slugify = require('slugify');
+import mongoose from 'mongoose';
+import slugify from 'slugify';
 // const User = require('./userModel');
 // const validator = require('validator');
 
@@ -187,4 +187,4 @@ tourSchema.pre(/^find/, function(next) {
 
 const Tour = mongoose.model('Tour', tourSchema);
 
-module.exports = Tour;
+export default Tour;

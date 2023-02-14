@@ -1,9 +1,11 @@
-const nodemailer = require('nodemailer');
-const pug = require('pug');
-const { htmlToText } = require('html-to-text');
+import nodemailer from 'nodemailer';
+import pug from 'pug';
+import HtmlToText from 'html-to-text';
+
+const { htmlToText } = HtmlToText;
 
 // For create email obj to send actual emails.
-module.exports = class Email {
+export default class Email {
   constructor(user, url) {
     this.to = user.email;
     this.firstName = user.name.split(' ')[0];
@@ -63,4 +65,4 @@ module.exports = class Email {
   async sendPasswordReset() {
     await this.send('passwordReset', 'Your password reset token (valid for only 10 minutes)');
   }
-};
+}

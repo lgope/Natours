@@ -15,6 +15,7 @@
     "class-methods-use-this": "off",
     "dot-notation":"warn",
     "prefer-destructuring": ["error", { "object": true, "array": false }],
-    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }]
+    "no-unused-vars": ["error", { "argsIgnorePattern": "req|res|next|val" }],
+    "arrow-body-style": ["error", "always"]
   }
 }

@@ -1,7 +1,7 @@
-const express = require('express');
-const tourController = require('./../controllers/tourController');
-const { protect, restrictTo } = require('./../controllers/authController');
-const reviewRouter = require('./../routes/reviewRoutes');
+import express from 'express';
+import * as tourController from './../controllers/tourController.js';
+import { protect, restrictTo } from './../controllers/authController.js';
+import reviewRouter from './../routes/reviewRoutes.js';
 
 const router = express.Router();
 
@@ -52,4 +52,5 @@ router
   )
   .delete(protect, restrictTo('admin', 'lead-guide'), tourController.deleteTour);
 
-module.exports = router;
+
+export default router;

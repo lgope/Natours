@@ -1,6 +1,6 @@
-const express = require('express');
-const viewsController = require('../controllers/viewsController');
-const authController = require('../controllers/authController');
+import express from 'express';
+import * as viewsController from '../controllers/viewsController.js';
+import * as authController from '../controllers/authController.js';
 
 const router = express.Router();
 
@@ -17,4 +17,5 @@ router.get('/my-tours', authController.protect, viewsController.getMyTours);
 
 router.post('/submit-user-data', authController.protect, viewsController.updateUserData);
 
-module.exports = router;
+
+export default router;

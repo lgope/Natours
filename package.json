@@ -24,7 +24,7 @@
   "homepage": "https://github.com/lgope/Natours#readme",
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "a": "^2.1.2",
+    "a": "^3.0.1",
     "axios": "^0.21.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -40,13 +40,13 @@
     "hpp": "^0.2.2",
     "html-to-text": "^5.1.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.7.5",
+    "mongoose": "^5.13.15",
     "morgan": "^1.9.1",
     "multer": "^1.4.2",
     "ndb": "^1.1.5",
     "nodemailer": "^6.6.1",
     "pug": "^3.0.1",
-    "sharp": "^0.30.5",
+    "sharp": "^0.28.3",
     "slugify": "^1.3.5",
     "stripe": "^7.14.0",
     "validator": "^13.7.0",
@@ -61,7 +61,7 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
-    "parcel-bundler": "^1.12.4",
+    "parcel-bundler": "^1.12.5",
     "prettier": "^1.19.1"
   },
   "engines": {

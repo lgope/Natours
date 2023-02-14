@@ -23,7 +23,7 @@
   "homepage": "https://github.com/lgope/Natours#readme",
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
-    "a": "^2.1.2",
+    "a": "^3.0.1",
     "axios": "^0.21.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",

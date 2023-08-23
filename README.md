@@ -23,22 +23,18 @@
   <a href="#acknowledgement">Acknowledgement</a>
 </p>
 
-## Deployed Version
-Live demo (Feel free to visit) 👉 : https://lgope-natours.onrender.com/
-
-
-## Key Features
+## Key Features 📝
 
 * Authentication and Authorization
   - Login and logout
 * Tour
-  - Manage booking, check tours map, check users' reviews and rating
+  - Manage booking, check tour map, check users' reviews and rating
 * User profile
   - Update username, photo, email, and password
 * Credit card Payment
 
 
-## Demonstration
+## Demonstration 🖥️
 #### Home Page :
 ![natoursHomePageonline-video-cutt](https://user-images.githubusercontent.com/58518192/72606801-7ebe0680-3949-11ea-8e88-613f022a64e5.gif)
 
@@ -59,7 +55,7 @@ Live demo (Feel free to visit) 👉 : https://lgope-natours.onrender.com/
 ![rsz_adminprofile](https://user-images.githubusercontent.com/58518192/72607648-4d463a80-394b-11ea-972f-a73160cfaa5b.png)
 
 
-## How To Use
+## How To Use 🤔
 
 ### Book a tour
 * Login to the site
@@ -78,12 +74,12 @@ Live demo (Feel free to visit) 👉 : https://lgope-natours.onrender.com/
 
 ### Manage your booking
 
-* Check the tour you have booked in "Manage Booking" page in your user settings. You'll be automatically redirected to this
+* Check the tour you have booked on the "Manage Booking" page in your user settings. You'll be automatically redirected to this
   page after you have completed the booking.
 
 ### Update your profile
 
-* You can update your own username, profile photo, email and password.
+* You can update your own username, profile photo, email, and password.
 
 
 
@@ -98,18 +94,18 @@ Check [Natours API Documentation](https://documenter.getpostman.com/view/8689170
 
 <b> API Features: </b>
 
-Tours List 👉 https://lgope-natours.onrender.com/api/v1/tours
+Tours List 👉🏻 https://lgope-natours.onrender.com/api/v1/tours
 
-Tours State 👉 https://lgope-natours.onrender.com/api/v1/tours/tour-stats
+Tours State 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/tour-stats
 
-Get Top 5 Cheap Tours 👉 https://lgope-natours.onrender.com/api/v1/tours/top-5-cheap
+Get Top 5 Cheap Tours 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/top-5-cheap
 
-Get Tours Within Radius 👉 https://lgope-natours.onrender.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
+Get Tours Within Radius 👉🏻 https://lgope-natours.onrender.com/api/v1/tours/tours-within/200/center/34.098453,-118.096327/unit/mi
 
 
 
-## Deployment
-The website is deployed with git into heroku. Below are the steps taken:
+## Deployment 🌍
+The website is deployed with git into Heroku. Below are the steps taken:
 ```
 git init
 git add -A
@@ -121,13 +117,13 @@ parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js
 git push heroku master
 heroku open
 ```
-You can also changed your website url by running this command:
+You can also change your website URL by running this command:
 ```
-heroku apps:rename natours-users
+heroku apps: rename natours-users
 ```
 
 
-## Build With
+## Build With 🏗️
 
 * [NodeJS](https://nodejs.org/en/) - JS runtime environment
 * [Express](http://expressjs.com/) - The web framework used
@@ -136,54 +132,99 @@ heroku apps:rename natours-users
 * [Pug](https://pugjs.org/api/getting-started.html) - High performance template engine
 * [JSON Web Token](https://jwt.io/) - Security token
 * [ParcelJS](https://parceljs.org/) - Blazing fast, zero configuration web application bundler
-* [Stripe](https://stripe.com/) - Online payment API
+* [Stripe](https://stripe.com/) - Online payment API and Making payments on the app.
 * [Postman](https://www.getpostman.com/) - API testing
 * [Mailtrap](https://mailtrap.io/) & [Sendgrid](https://sendgrid.com/) - Email delivery platform
 * [Heroku](https://www.heroku.com/) - Cloud platform
+* [Mapbox](https://www.mapbox.com/) - Displaying the different locations of each tour.
 
 
 
-## To-do
+## To-do 🗒️
 
 * Review and rating
-  - Allow user to add a review directly at the website after they have taken a tour
+  - Allow users to add a review directly at the website after they have taken a tour
 * Booking
-  - Prevent duplicate bookings after user has booked that exact tour, implement favourite tours
+  - Prevent duplicate bookings after a user has booked that exact tour, implement favorite tours
 * Advanced authentication features
-  - Signup, confirm user email, login with refresh token, two-factor authentication
-* And More ! There's always room for improvement!
+  - Signup, confirm user email, log in with refresh token, two-factor authentication
+* And More! There's always room for improvement!
+
+## Setting Up Your Local Environment ⚙️
+
+If you wish to play around with the code base in your local environment, do the following
+
+```
+* Clone this repo to your local machine.
+* Using the terminal, navigate to the cloned repo.
+* Install all the necessary dependencies, as stipulated in the package.json file.
+* If you don't already have one, set up accounts with: MONGODB, MAPBOX, STRIPE, SENDGRID, and MAILTRAP. Please ensure to have at least basic knowledge of how these services work.
+* In your .env file, set environment variables for the following:
+    * DATABASE=your Mongodb database URL
+    * DATABASE_PASSWORD=your MongoDB password
+
+    * SECRET=your JSON web token secret
+    * JWT_EXPIRES_IN=90d
+    * JWT_COOKIE_EXPIRES_IN=90
+
+    * EMAIL_USERNAME=your mailtrap username
+    * EMAIL_PASSWORD=your mailtrap password
+    * EMAIL_HOST=smtp.mailtrap.io
+    * EMAIL_PORT=2525
+    * EMAIL_FROM=your real-life email address
+
+    * SENDGRID_USERNAME=apikey
+    * SENDGRID_PASSWORD=your sendgrid password
+
+    * STRIPE_SECRET_KEY=your stripe secret key
+    * STRIPE_WEBHOOK_SECRET=your stripe webhook secret
+
+* Start the server.
+* Your app should be running just fine.
+```
+
+#### Demo-`.env` file :
+![demo-env-file](https://github.com/lgope/Natours/assets/58518192/cf5b833f-2a48-48a1-aeb3-5ffea8967e33)
 
 
-## Installation
-You can fork the app or you can git-clone the app into your local machine. Once done that, please install all the
+## Installation 🛠️
+You can fork the app or you can git-clone the app into your local machine. Once done, please install all the
 dependencies by running
 ```
 $ npm i
-set your env variables
+Set your env variables
 $ npm run watch:js
 $ npm run build:js
 $ npm run dev (for development)
 $ npm run start:prod (for production)
 $ npm run debug (for debug)
 $ npm start
-Setting up ESLint and Prettier in VS Code 👇
+Setting up ESLint and Prettier in VS Code 👇🏻
 $ npm i eslint prettier eslint-config-prettier eslint-plugin-prettier eslint-config-airbnb eslint-plugin-node
 eslint-plugin-import eslint-plugin-jsx-a11y  eslint-plugin-react --save-dev
 ```
 
+## Contributing 💡
+Pull requests are welcome but please open an issue and discuss what you will do before 😊
 
-## Known Bugs
+## Known Bugs 🚨
 Feel free to email me at lakshman.gope2@gmail.com if you run into any issues or have questions, ideas or concerns.
 Please enjoy and feel free to share your opinion, constructive criticism, or comments about my work. Thank you! 🙂
 
-## Future Updates
+## Future Updates 🪴
 
 * Enable PWA
 * Improve overall UX/UI and fix bugs
 * Featured Tours
 * Recently Viewed Tours
-* And More ! There's always room for improvement!
+* And More! There's always room for improvement!
 
-## Acknowledgement
+## License 📄
+This project is open-sourced under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Deployed Version 🚀
+Live demo (Feel free to visit) 👉🏻 : https://lgope-natours.onrender.com/
+
+## Acknowledgement 🙏🏻
 
 * This project is part of the online course I've taken at Udemy. Thanks to Jonas Schmedtmann for creating this awesome course! Link to the course: [Node.js, Express, MongoDB & More: The Complete Bootcamp 2019](https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/)

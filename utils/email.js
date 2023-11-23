@@ -1,6 +1,6 @@
-import nodemailer from 'nodemailer';
-import pug from 'pug';
-import HtmlToText from 'html-to-text';
+import nodemailer from "nodemailer";
+import pug from "pug";
+import HtmlToText from "html-to-text";
 
 const { htmlToText } = HtmlToText;
 
@@ -8,17 +8,17 @@ const { htmlToText } = HtmlToText;
 export default class Email {
   constructor(user, url) {
     this.to = user.email;
-    this.firstName = user.name.split(' ')[0];
+    this.firstName = user.name.split(" ")[0];
     this.url = url;
     this.from = `Lakshman Gope <${process.env.EMAIL_FROM}>`;
   }
 
   // Create different transports for different environments
   newTransport() {
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === "production") {
       // Sendgrid
       return nodemailer.createTransport({
-        service: 'SendGrid',
+        service: "SendGrid",
         auth: {
           user: process.env.SENDGRID_USERNAME,
           pass: process.env.SENDGRID_PASSWORD
@@ -59,10 +59,10 @@ export default class Email {
   }
 
   async sendWelcome() {
-    await this.send('welcome', 'Welcome to the Natours Family!');
+    await this.send("welcome", "Welcome to the Natours Family!");
   }
 
   async sendPasswordReset() {
-    await this.send('passwordReset', 'Your password reset token (valid for only 10 minutes)');
+    await this.send("passwordReset", "Your password reset token (valid for only 10 minutes)");
   }
 }

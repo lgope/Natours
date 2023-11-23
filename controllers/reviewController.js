@@ -1,6 +1,6 @@
-import Review from './../models/reviewModel.js';
+import Review from "./../models/reviewModel.js";
 // import catchAsync from './../utils/catchAsync.js';
-import * as factory from './handlerFactory.js';
+import * as factory from "./handlerFactory.js";
 
 export const setTourUserIds = (req, res, next) => {
   // Allow nested routes

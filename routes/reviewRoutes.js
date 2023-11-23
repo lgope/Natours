@@ -1,6 +1,6 @@
-import express from 'express';
-import * as reviewController from './../controllers/reviewController.js';
-import * as authController from './../controllers/authController.js';
+import express from "express";
+import * as reviewController from "./../controllers/reviewController.js";
+import * as authController from "./../controllers/authController.js";
 
 const router = express.Router({ mergeParams: true });
 
@@ -12,19 +12,18 @@ router.use(authController.protect);
 
 // user review routes
 router
-  .route('/')
+  .route("/")
   .get(reviewController.getAllReviews)
   .post(
-    authController.restrictTo('user'),
+    authController.restrictTo("user"),
     reviewController.setTourUserIds,
     reviewController.createReview
   );
 
 router
-  .route('/:id')
+  .route("/:id")
   .get(reviewController.getlReview)
-  .patch(authController.restrictTo('user', 'admin'), reviewController.updateReview)
-  .delete(authController.restrictTo('user', 'admin'), reviewController.deleteReview);
-
+  .patch(authController.restrictTo("user", "admin"), reviewController.updateReview)
+  .delete(authController.restrictTo("user", "admin"), reviewController.deleteReview);
 
 export default router;

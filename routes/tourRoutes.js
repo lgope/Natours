@@ -1,7 +1,7 @@
-import express from 'express';
-import * as tourController from './../controllers/tourController.js';
-import { protect, restrictTo } from './../controllers/authController.js';
-import reviewRouter from './../routes/reviewRoutes.js';
+import express from "express";
+import * as tourController from "./../controllers/tourController.js";
+import { protect, restrictTo } from "./../controllers/authController.js";
+import reviewRouter from "./../routes/reviewRoutes.js";
 
 const router = express.Router();
 
@@ -11,7 +11,7 @@ const router = express.Router();
 
 // router.route('/:tourId/reviews').post(protect, restrictTo('user'), reviewController.createReview);
 
-router.use('/:tourId/reviews', reviewRouter);
+router.use("/:tourId/reviews", reviewRouter);
 
 // router.param('id', checkID);
 
@@ -20,37 +20,36 @@ router.use('/:tourId/reviews', reviewRouter);
 // If not, send back 400 (bad requst)
 // Add it to the post handler stack
 
-router.route('/top-5-cheap').get(tourController.aliasTopTours, tourController.getAllTours);
+router.route("/top-5-cheap").get(tourController.aliasTopTours, tourController.getAllTours);
 
-router.route('/tour-stats').get(tourController.getTourStats);
+router.route("/tour-stats").get(tourController.getTourStats);
 router
-  .route('/monthly-plan/:year')
-  .get(protect, restrictTo('admin', 'lead-guide', 'guide'), tourController.getMonthlyPlan);
+  .route("/monthly-plan/:year")
+  .get(protect, restrictTo("admin", "lead-guide", "guide"), tourController.getMonthlyPlan);
 
 router
-  .route('/tours-within/:distance/center/:latlng/unit/:unit')
+  .route("/tours-within/:distance/center/:latlng/unit/:unit")
   .get(tourController.getToursWithin);
 // /tours-within?distance=233&center=-40,45&unit=mi
 // /tours-within/233/center/-40,45/unit/mi
 
-router.route('/distances/:latlng/unit/:unit').get(tourController.getDistances);
+router.route("/distances/:latlng/unit/:unit").get(tourController.getDistances);
 
 router
-  .route('/')
+  .route("/")
   .get(tourController.getAllTours)
-  .post(protect, restrictTo('admin', 'lead-guide'), tourController.createTour);
+  .post(protect, restrictTo("admin", "lead-guide"), tourController.createTour);
 
 router
-  .route('/:id')
+  .route("/:id")
   .get(tourController.getTour)
   .patch(
     protect,
-    restrictTo('admin', 'lead-guide'),
+    restrictTo("admin", "lead-guide"),
     tourController.uploadTourImages,
     tourController.resizeTourImages,
     tourController.updateTour
   )
-  .delete(protect, restrictTo('admin', 'lead-guide'), tourController.deleteTour);
-
+  .delete(protect, restrictTo("admin", "lead-guide"), tourController.deleteTour);
 
 export default router;

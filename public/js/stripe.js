@@ -1,8 +1,8 @@
 /* eslint-disable */
 
-import axios from 'axios';
-import { showAlert } from './alerts';
-import keys from '../../config/keys';
+import axios from "axios";
+import { showAlert } from "./alerts";
+import keys from "../../config/keys";
 
 const stripe = Stripe(keys.stripeKey);
 
@@ -18,6 +18,6 @@ export const bookTour = async tourId => {
     });
   } catch (err) {
     console.log(err);
-    showAlert('error', err);
+    showAlert("error", err);
   }
 };

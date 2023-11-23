@@ -1,18 +1,18 @@
-import catchAsync from './../utils/catchAsync.js';
-import AppError from './../utils/appError.js';
-import APIFeatures from './../utils/apiFeatures.js';
+import catchAsync from "./../utils/catchAsync.js";
+import AppError from "./../utils/appError.js";
+import APIFeatures from "./../utils/apiFeatures.js";
 
 export const deleteOne = Model =>
   catchAsync(async (req, res, next) => {
     const doc = await Model.findByIdAndDelete(req.params.id);
 
     if (!doc) {
-      return next(new AppError('No document found with that ID', 404));
+      return next(new AppError("No document found with that ID", 404));
     }
 
     res.status(204).json({
       // 204 means no content
-      status: 'Success',
+      status: "Success",
       data: null
     });
   });
@@ -25,11 +25,11 @@ export const updateOne = Model =>
     });
 
     if (!doc) {
-      return next(new AppError('No document found with that ID', 404));
+      return next(new AppError("No document found with that ID", 404));
     }
 
     res.status(200).json({
-      status: 'success',
+      status: "success",
       data: {
         data: doc
       }
@@ -41,7 +41,7 @@ export const createOne = Model =>
     const doc = await Model.create(req.body);
 
     res.status(201).json({
-      status: 'success',
+      status: "success",
       data: {
         data: doc
       }
@@ -55,11 +55,11 @@ export const getOne = (Model, popOptions) =>
     const doc = await query;
 
     if (!doc) {
-      return next(new AppError('No tour found with that ID', 404));
+      return next(new AppError("No tour found with that ID", 404));
     }
 
     res.status(200).json({
-      status: 'success',
+      status: "success",
       data: {
         data: doc
       }
@@ -83,7 +83,7 @@ export const getAll = Model =>
 
     // SEND RESPONSE
     res.status(200).json({
-      status: 'success',
+      status: "success",
       results: doc.length,
       data: {
         data: doc

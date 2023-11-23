@@ -1,9 +1,12 @@
 {
   "name": "node-natours",
   "version": "1.0.0",
+  "author": "Lakshman Gope",
   "description": "A mockup landing page for a travel agency startup.",
   "main": "app.js",
   "type": "module",
+  "license": "ISC",
+  "homepage": "https://github.com/lgope/Natours#readme",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
@@ -16,12 +19,9 @@
     "type": "git",
     "url": "git+https://github.com/lgope/Natours.git"
   },
-  "author": "Lakshman Gope",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/lgope/Natours/issues"
   },
-  "homepage": "https://github.com/lgope/Natours#readme",
   "dependencies": {
     "@babel/polyfill": "^7.7.0",
     "a": "^3.0.1",
